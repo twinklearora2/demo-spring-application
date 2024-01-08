@@ -1,0 +1,1 @@
+insert into person(p_id, p_name) values (1,'abc');
