@@ -31,6 +31,11 @@ public class DemoController {
         return new ResponseEntity(personService.getPersonById(p_id),HttpStatus.OK);
 
     }
+    @DeleteMapping("deletePerson/{id}")
+    public ResponseEntity deletePerson(@PathVariable("id") Integer p_id){
+        personService.deletePersonById(p_id);
+        return new ResponseEntity("deleted record Successfully",HttpStatus.OK);
+    }
 
 }
 

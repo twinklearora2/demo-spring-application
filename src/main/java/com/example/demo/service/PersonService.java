@@ -21,4 +21,8 @@ public class PersonService {
     public Person getPersonById(int id){
        return personRepository.findById(id).get();
     }
+
+    public void deletePersonById(Integer pId) {
+        personRepository.deleteById(pId);
+    }
 }
